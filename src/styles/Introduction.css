@@ -1,0 +1,102 @@
+.introduction__container{
+    width: 100%;
+    height: 100vh;
+    background-color: #252934;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.introduction__letter{
+    color: #f5f5f5;
+}
+
+.introduction__letter > h1 > span {
+    color: red;
+}
+
+.logo{
+    width: 10rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+.ghLogo {
+    height : 4rem;
+    object-fit: contain;
+    filter: invert();
+    align-self: center;
+}
+
+.lin {
+    height : 4rem;
+    object-fit: contain;
+    filter: invert();
+    align-self: center;
+}
+
+
+.ghLogo:hover {
+    transform: scale(1.05);
+    filter: invert(22%) sepia(100%) saturate(6801%) hue-rotate(358deg) brightness(101%) contrast(112%);
+    cursor: pointer;
+}
+
+.lin:hover {
+    transform: scale(1.05);
+    filter: invert(30%) sepia(88%) saturate(4522%) hue-rotate(183deg) brightness(92%) contrast(101%);
+    cursor: pointer;
+}
+
+.animatedLeft {
+    animation: slideFromLeft 0.6s ease forwards;
+}
+
+.animatedRight {
+    animation: slideFromRight 0.6s ease forwards;
+}
+
+@keyframes slideFromLeft {
+    0%{
+        transform: translateX(-3rem);
+        visibility : visible;
+        opacity : 0;
+    }
+    100%{
+        transform: translateX(0);
+        visibility : visible;
+        opacity : 100%;
+    }
+}
+
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(3rem);
+        visibility : visible;
+        opacity : 0;
+    }
+    100%{
+        transform: translateX(0);
+        visibility : visible;
+        opacity : 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .introduction__letter{
+        font-size: 0.5rem;
+        padding:  0 1rem;
+    }
+
+    .logo {
+        width: 8rem;
+    }
+
+    .ghLogo, .lin {
+        height: 3.2rem;
+    }
+}

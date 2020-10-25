@@ -1,0 +1,15 @@
+.projects__container{
+    position: relative;
+    display: flex;
+}
+
+.projectCardDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.projectCards{
+    position: absolute;
+    display: flex;
+}
