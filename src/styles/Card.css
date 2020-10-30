@@ -43,7 +43,7 @@
     text-align: center;
     background-color: black;
     border-radius: 5px;
-    color : #f5f5f5;
+    color : var(--front-col);
 }
 
 .frontSide__title{
@@ -57,7 +57,7 @@
     text-align: center;
     background-color: black;
     border-radius: 5px;
-    color : #f5f5f5;
+    color : var(--front-col);
     overflow: hidden;
     transform: rotateY(180deg);
 }

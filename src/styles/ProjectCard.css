@@ -71,7 +71,7 @@
 .goto:hover{
     transform: scale(0.9);
     transition: 0.4s;
-    color: red;
+    color: var(--front-hl);
 }
 
 

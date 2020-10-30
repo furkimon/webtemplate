@@ -1,2 +1,9 @@
 *{margin:0}
 @import url('https://fonts.googleapis.com/css2?&family=Press+Start+2P&display=swap');
+
+:root{
+    --main-pri : #313639;
+    --main-sec : #252934;
+    --front-col : #f5f5f5;
+    --front-hl : red;
+}

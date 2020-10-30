@@ -1,7 +1,8 @@
 .touch__container{
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #252934;
+    background-color: var(--main-sec);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,51 +12,83 @@
 
 .farewell > h1{
     font-size: 7rem;
-    color: #f5f5f5;
+    color: var(--front-col);
 }
 
 .farewell > h1 > span{
-    color: red;
+    color: var(--front-hl);
 }
 
 .farewell > h3 {
     font-size: 1.4rem;
-    color: #f5f5f5;
+    color: var(--front-col);
 }
 
-.touch__inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-}
 
 .mail {
     position: relative;
-    width: max-content;
     margin-top: 1.4rem;
     padding: 3rem;
     border-radius: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--front-col);
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 
 }
 
+
+.mail-after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 3rem;
+    border-radius: 100%;
+    background-color: var(--front-col);
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.mail-box{
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    background-color: blue;
+    display: none;
+    transition: 0.4s;
+}
+
+.lines{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top:0;right:0;
+    padding: 3rem;
+    border-radius: 100%;
+    transition: transform 0.6s;
+    cursor: pointer;
+    user-select: none;
+}
 
 .line{
     position: absolute;
     width: 3rem;
     height:0.2rem;
     background-color: black;
+    user-select: none;
+    transition: 0.5s;
 }
 
 .line2{
     transform: rotate(90deg);
 }
 
+.mail-form{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: display 0.5s;
+}
 
 @media only screen and (max-width: 768px) {
     .farewell > h1{
@@ -70,5 +103,18 @@
         margin-top: 1rem;
         padding: 2rem;
         border-radius: 2rem;
+    
+    }
+    .mail-after{
+        padding: 2rem;
+    }
+
+    .lines{
+        padding: 2rem;
+    }
+
+    .line{
+        width: 2rem;
+        height:0.13rem;
     }
 }

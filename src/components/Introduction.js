@@ -21,12 +21,12 @@ const Introduction = () => {
                     Looking for a <span>Frontend Developer</span> role.</h1>
                 </div>
                 <VisibilitySensor onChange={animateLogos}>
-                <div className="logo">
+                <div className="logo-section">
                     <a href="https://github.com/furkimon" rel="noopener noreferrer" target="_blank">
-                        <img className={"ghLogo " + animateLeft } src={ghLogo} alt="" />
+                        <img className={"ghLogo logo " + animateLeft } src={ghLogo} alt="" />
                     </a>
                     <a href="https://www.linkedin.com/in/furkantonyali/" rel="noopener noreferrer" target="_blank">
-                        <img className={"lin " + animateRight } src={lin} alt="" />
+                        <img className={"linLogo logo " + animateRight } src={lin} alt="" />
                     </a>
                 </div>
                 </VisibilitySensor>
