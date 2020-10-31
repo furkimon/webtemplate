@@ -1,49 +1,42 @@
-.header__container {
+.header__container{
     z-index: 3;
     position: fixed;
-    top: 10vh;
-}
-
-.header__menu{
-    position: relative;
     display: flex;
-    flex-direction: column;
-    list-style: none;
-}
-
-.menu-item::before{
-    position: absolute;
-    content: "";
-    padding: 15px;
-    border: 2px solid var(--front-col);
-    border-radius: 20px;
-    visibility: visible;
-}
-
-.menu-item:hover::before{
-    visibility: hidden;
+    top: 8vh;
+    left: 8vh;
+    width: 20rem;
 }
 
 .menu-item{
-    width: 30px;
+    width: 1rem;
+    height: 1rem;
     position: relative;
-    color: var(--front-col);
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 20px;
+    content: "";
     display: grid;
     place-content: center;
-    margin-bottom: 5px;
-    visibility: hidden;
-    transition: width 0.5s ease;
+    padding: 1rem;
+    border: 1px solid var(--front-col);
+    border-radius: 50px;
+    margin-left: .6rem;
+    /* -webkit-transition: width 0.3s;
+    -moz-transition:  width 0.3s;
+    -o-transition:  width 0.3s;
+    -ms-transition:  width 0.3s; */
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
 }
 
+.menu-item > div {
+    opacity: 0;
+} 
+
 .menu-item:hover{
-    border: 2px solid var(--front-col);
     width: 100%;
-    visibility: visible;
-    transition: width 0.3s ease;
-    overflow: hidden;
+}
+
+.menu-item:hover > div{
+    opacity: 1;
 }
 
 .menu-item:nth-child(1):hover{
@@ -59,14 +52,12 @@
     color:#70496B;
 }
 
-
-.active.menu-item::before{
-    border: 2px solid var(--front-hl);
+.active.menu-item{
+    border-color: var(--front-hl);
 }
 
 @media only screen and (max-width: 768px) {
-    .header__menu{
-        flex-direction: row;
+    .header__container{
         transition: width 0.3s ease;
     }
 }

@@ -7,7 +7,6 @@ class Header extends Component {
         const handleSetActive = to => {};
         return (
             <div className="header__container">
-                <ul className="header__menu">
                     <Link
                         to="salutation"
                         className="menu-item"
@@ -16,7 +15,7 @@ class Header extends Component {
                         smooth={true}
                         duration={600}
                         onSetActive={to => handleSetActive(to)}
-                    ><li>salutation</li>
+                    ><div>salutation</div>
                     </Link>
                     <Link
                         to="introduction"
@@ -27,7 +26,7 @@ class Header extends Component {
                         duration={600}
                         onSetActive={to => handleSetActive(to)}
                     >
-                        <li>introduction</li>
+                        <div>introduction</div>
                     </Link>
                     <Link
                         to="expertise"
@@ -38,7 +37,7 @@ class Header extends Component {
                         duration={600}
                         onSetActive={to => handleSetActive(to)}
                     >
-                        <li>expertise</li>
+                        <div>expertise</div>
                     </Link>
 
                     <Link
@@ -50,9 +49,8 @@ class Header extends Component {
                         duration={600}
                         onSetActive={to => handleSetActive(to)}
                     >
-                        <li>touch</li>
+                        <div>touch</div>
                     </Link>
-                </ul>
             </div>
         )
     }
